@@ -2,7 +2,7 @@ Gated Context Aggregation Network for Image Dehazing and Deraining
 =======
 ![image](imgs/net_arch.png)
 
-This is the implementation of our WACV 2019 paper *"Gated Context Aggregation Network for Image Dehazing and Deraining"* by [Dongdong Chen](<http://www.dongdongchen.bid/>), Mingming He, [Qingnan Fan](<https://fqnchina.github.io/>), *et al.*
+This is the implementation of our WACV 2019 paper *"Gated Context Aggregation Network for Image Dehazing and Deraining"* by [Dongdong Chen](<http://www.dongdongchen.bid/>), [Mingming He](<https://github.com/hmmlillian>), [Qingnan Fan](<https://fqnchina.github.io/>), *et al.*
 
 In this paper, we propose a new end-to-end gated context aggregation network GCANet for image dehazing, in which the smoothed dilated convolution is used to avoid the gridding artifacts and a gated subnetwork is applied to fuse the features of different levels. Experiments show that GCANet can obtain much better performance than all the previous state-of-the-art image dehazing methods both qualitatively and quantitatively
 ![image](imgs/dehaze_visual.png)
@@ -13,11 +13,7 @@ We further apply our proposed GCANet to the image deraining task, which also out
 
 ## Getting Started
 
-This paper is implemented with Pytorch framework.@article{chen2018gated,
-  title={Gated Context Aggregation Network for Image Dehazing and Deraining},
-  author={Chen, Dongdong and He, Mingming and Fan, Qingnan and Liao, Jing and Zhang, Liheng and Hou, Dongdong and Yuan, Lu and Hua, Gang},
-  journal={WACV 2019},
-  year={2018}
+This paper is implemented with Pytorch framework.
 
 Demo
 ----
@@ -25,7 +21,7 @@ Demo
 Directly put all your test images under one directory. Then run:
 
 ```bash
-python test.py --task [dehaze | derain] --gpu_id [gpu_id] --indir [input hazy or rainy directory] --outdir [output clean directory]
+python test.py --task [dehaze | derain] --gpu_id [gpu_id] --indir [input directory] --outdir [output directory]
 ```
 
 Cite
