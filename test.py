@@ -42,7 +42,11 @@ net.load_state_dict(torch.load(opt.model, map_location='cpu'))
 net.eval()
 
 for img_path in test_img_paths:
-    img = np.array(Image.open(img_path).convert('RGB')).astype('float')
+    img = Image.open(img_path).convert('RGB')
+    im_w, im_h = img.size
+    if im_w % 4 != 0 or im_h % 4 != 0:
+        img = img.resize((int(im_w // 4 * 4), int(im_h // 4 * 4))) 
+    img = np.array(img).astype('float')
     img_data = torch.from_numpy(img.transpose((2, 0, 1))).float()
     edge_data = edge_compute(img_data)
     in_data = torch.cat((img_data, edge_data), dim=0).unsqueeze(0) - 128 
