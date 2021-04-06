@@ -24,6 +24,8 @@ Directly put all your test images under one directory. Then run:
 python test.py --task [dehaze | derain] --gpu_id [gpu_id] --indir [input directory] --outdir [output directory]
 ```
 
+For training, please download the training code from <https://drive.google.com/file/d/1T7X1HYztbz6S75vTRNtREgGEOI269KDk/view?usp=sharing>
+
 Cite
 ----
 
